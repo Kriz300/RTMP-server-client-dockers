@@ -35,7 +35,7 @@ _Ahora toca abrir wireshark y captar los paquetes correspondientes al trafico en
 ## Autores ✒️
 
 * **Christian Muñoz I.** [Kriz](https://github.com/Kriz300)
-* **Camilo Rubilar** [Niyet](#https://github.com/)
+* **Camilo Rubilar** [Niyet](https://github.com/niyetsin)
 
 ## Licencia 📄
 
