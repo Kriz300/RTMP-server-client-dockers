@@ -14,8 +14,22 @@ $ sudo docker build .
 
 _**Run:**_
 
+* Server:
+
+_Debe ser ejecutado al principio con el fin de que posea la ip 172.17.0.2 y comience la transmicion de forma automatica._
+
 ```
 $ sudo docker run -it <imageid>
+```
+
+* Client:
+
+_Se debe ingresar al contenedor para poder iniciar la captura de los datos enviados por el servidor, se espera arreglar esto en futuras actualizaciones._
+
+```
+$ sudo docker run -it <imageid>
+root@xxxxxxxxxxxx:/tmp# ldconfig
+root@xxxxxxxxxxxx:/tmp# cvlc --x11-display :0 rtmp://172.17.0.2/prueba/stream &
 ```
 
 _Ahora toca abrir wireshark y captar los paquetes correspondientes al trafico entre ambos contenedores._
@@ -35,7 +49,7 @@ _Ahora toca abrir wireshark y captar los paquetes correspondientes al trafico en
 ## Autores ✒️
 
 * **Christian Muñoz I.** [Kriz](https://github.com/Kriz300)
-* **Camilo Rubilar** [Niyet](https://github.com/niyetsin)
+* **Camilo Rubilar** [Niyet](#https://github.com/)
 
 ## Licencia 📄
 

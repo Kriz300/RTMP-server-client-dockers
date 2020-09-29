@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER camilo.rubilar@mail.udp.cl | christian.munoz@mail.udp.cl
+MAINTAINER camilo.rubilar@mail.udp.cl | christian.munoz1@mail.udp.cl
 
 WORKDIR /tmp
 ENV TZ=America/Santiago
@@ -86,7 +86,7 @@ RUN cd /tmp/nginx-1.19.2/ \
             && make install
 
 RUN cd /tmp/ \
-    rm -r nginx-1.19.2/ openssl-1.1.1h/ pcre-8.44/ zlib-1.2.11/
+    && rm -r nginx-1.19.2/ openssl-1.1.1h/ pcre-8.44/ zlib-1.2.11/
     
 RUN cd /etc/nginx/ \
     && chmod 775 nginx.conf
@@ -98,3 +98,6 @@ RUN chmod u=rwx,g=rx,o=r /etc/nginx/nginx.conf
 RUN mkdir -p /var/lib/nginx \
     && echo "[Unit]\nDescription=A high performance web server and a reverse proxy server\nAfter=network.target\n\n[Service]\nType=forking\nPIDFile=/run/nginx.pid\nExecStartPre=/usr/sbin/nginx -t -q -g 'daemon on; master_process on;'\nExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'\nExecReload=/usr/sbin/nginx -g 'daemon on; master_process on;' -s reload\nExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid\nTimeoutStopSec=5\nKillMode=mixed\n\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/nginx.service \
     && echo "[Nginx HTTP]\ntitle=Web Server (Nginx, HTTP)\ndescription=Small, but very powerful and efficient web server\nports=80/tcp\n\n[Nginx HTTPS]\ntitle=Web Server (Nginx, HTTPS)\ndescription=Small, but very powerful and efficient web server\nports=443/tcp\n\n[Nginx Full]\ntitle=Web Server (Nginx, HTTP + HTTPS)\ndescription=Small, but very powerful and efficient web server\nports=80,443/tcp" >> /etc/ufw/applications.d/nginx
+     
+CMD nginx \
+    && ffmpeg -f lavfi -i testsrc -f flv rtmp://172.17.0.2/prueba/stream

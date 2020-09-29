@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER camilo.rubilar@mail.udp.cl | christian.munoz@mail.udp.cl
+MAINTAINER camilo.rubilar@mail.udp.cl | christian.munoz1@mail.udp.cl
 
 WORKDIR /tmp/
 ENV TZ=America/Santiago
