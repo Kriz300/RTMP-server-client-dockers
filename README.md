@@ -54,3 +54,7 @@ _Ahora toca abrir wireshark y captar los paquetes correspondientes al trafico en
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para detalles
+
+## Video Tarea 2
+
+[![Video](https://raw.githubusercontent.com/Kriz300/Test/master/video.png?token=ANZKY63GFGRMQZYV7SRBCVS7QEBBC)](https://youtu.be/oKX_sNL9PRQ)
