@@ -16,7 +16,7 @@ _**Run:**_
 
 * Server:
 
-_Debe ser ejecutado al principio con el fin de que posea la ip 172.17.0.2 y comience la transmicion de forma automatica._
+_Debe ser ejecutado al principio con el fin de que posea la ip 172.17.0.2 y comience la transmicion de forma automatica. El video de prueba dura un minuto._
 
 ```
 $ sudo docker run -it <imageid>
@@ -27,9 +27,7 @@ $ sudo docker run -it <imageid>
 _Se debe ingresar al contenedor para poder iniciar la captura de los datos enviados por el servidor, se espera arreglar esto en futuras actualizaciones._
 
 ```
-$ sudo docker run -it <imageid>
-root@xxxxxxxxxxxx:/tmp# ldconfig
-root@xxxxxxxxxxxx:/tmp# cvlc --x11-display :0 rtmp://172.17.0.2/prueba/stream &
+$ sudo docker run -it --volume /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY <imageid> rtmp://172.17.0.2/prueba/stream
 ```
 
 _Ahora toca abrir wireshark y captar los paquetes correspondientes al trafico entre ambos contenedores._
