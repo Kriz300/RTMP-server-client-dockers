@@ -97,4 +97,4 @@ RUN mkdir -p /var/lib/nginx \
     && echo "[Nginx HTTP]\ntitle=Web Server (Nginx, HTTP)\ndescription=Small, but very powerful and efficient web server\nports=80/tcp\n\n[Nginx HTTPS]\ntitle=Web Server (Nginx, HTTPS)\ndescription=Small, but very powerful and efficient web server\nports=443/tcp\n\n[Nginx Full]\ntitle=Web Server (Nginx, HTTP + HTTPS)\ndescription=Small, but very powerful and efficient web server\nports=80,443/tcp" >> /etc/ufw/applications.d/nginx
 
 CMD nginx \
-    && ffmpeg -f lavfi -i testsrc=duration=60:size=1280x720:rate=30 testsrc.mpg -f flv rtmp://172.17.0.2/prueba/stream
+    && ffmpeg -f lavfi -i testsrc=duration=30:size=1280x720:rate=60 testsrc.mpg -f flv rtmp://172.17.0.2/prueba/stream
