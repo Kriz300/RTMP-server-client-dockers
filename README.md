@@ -47,7 +47,7 @@ _Ahora toca abrir wireshark y captar los paquetes correspondientes al trafico en
 ## Autores ✒️
 
 * **Christian Muñoz I.** [Kriz](https://github.com/Kriz300)
-* **Camilo Rubilar** [Niyet](#https://github.com/)
+* **Camilo Rubilar** [Niyet](https://github.com/niyetsin)
 
 ## Licencia 📄
 
@@ -55,4 +55,4 @@ Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) pa
 
 ## Video Tarea 2
 
-[![Video](https://raw.githubusercontent.com/Kriz300/Test/master/video.png?token=ANZKY63GFGRMQZYV7SRBCVS7QEBBC)](https://youtu.be/oKX_sNL9PRQ)
+[![Video](https://i9.ytimg.com/vi_webp/oKX_sNL9PRQ/hqdefault.webp?time=1603254900000&sqp=CPT0vvwF&rs=AOn4CLAN4oHKz8aXtIrvdKROtMkX1vABqg)](https://youtu.be/oKX_sNL9PRQ)
