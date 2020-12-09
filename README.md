@@ -53,6 +53,10 @@ _Ahora toca abrir wireshark y captar los paquetes correspondientes al trafico en
 
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para detalles
 
-## Video Tarea 2
+## Videos de análisis de RTMP
+* Uso de Dockers.
+* Modificación de paquetes con [Polymorph](https://github.com/shramos/polymorph).
+* Metricas de red con netem.
+* Alertas de trafico con [snort 2.9.17](https://upcloud.com/community/tutorials/install-snort-ubuntu/).
 
-[![Video](https://i9.ytimg.com/vi_webp/oKX_sNL9PRQ/hqdefault.webp?time=1603254900000&sqp=CPT0vvwF&rs=AOn4CLAN4oHKz8aXtIrvdKROtMkX1vABqg)](https://youtu.be/oKX_sNL9PRQ)
+[![Lista de reproducción](https://i.ytimg.com/vi/bK8OqxjKdMU/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDdYriW3ReDEkItHee2UbjoSQOqJw)](https://www.youtube.com/playlist?list=PLvo7Q2jEy7IY3oslX8FrAnMsiSOHkdAj0)
