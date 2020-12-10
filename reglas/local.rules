@@ -1,0 +1,16 @@
+#flow
+alert tcp 172.17.0.3 any -> any any (msg: "connection detected by flow"; content:"connect"; flow:to_server,established; sid: 123;)
+alert tcp 172.17.0.3 any -> any any (msg: "disconnection detected by flow :c"; flags:RA; flow:to_server; sid: 321;)
+
+#pcre // https://regexr.com/
+alert tcp any any -> any any (msg: "REGEX FOMEEEEE"; pcre:"/prueba/"; sid:775;)
+
+#dzise
+alert tcp any any -> any any (msg: "TCP payload menor a 100"; flags:AP; content:"Video Data"; dsize:<100;  sid:777;)
+#alert tcp any any -> any any (msg: "TCP payload igual a 0"; dsize:0;  sid:777;)
+
+#tag acivate/dynamic
+alert tcp any any -> any any (msg:"connection detected by tag el nuevo acivate/dynamic"; content:"connect"; tag:session,10,seconds; sid:755;)
+
+#offset
+alert tcp any any -> any any (msg: "offset"; content:"connect"; offset:0; sid:213;)
